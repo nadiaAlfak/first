@@ -22,6 +22,7 @@ public class HorofeSedaDar {
     }
     //
     private boolean chek(String kalame){
+        //salam nadia, man in code ro ezafe kardam.
         try{
         String chahar=new String();
         chahar=String.valueOf(kalame.charAt(3));
