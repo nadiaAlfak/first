@@ -1,39 +1,36 @@
 import java.util.Scanner;
 
 public class HorofeSedaDar {
-    public void horof(){
-        boolean issedaDar=chek(vorodi());
+    public void horof() {
+        boolean issedaDar = chek(vorodi());
 
-        if(issedaDar==true){
+        if (issedaDar == true) {
             System.out.println("seda dar bod");
-        }
-        else if (issedaDar==false){
+        } else if (issedaDar == false) {
             System.out.println("seda dar nabod");
         }
-
     }
+
     //gereftan vorodi az karbar
-    private String vorodi(){
+    private String vorodi() {
         System.out.println("esm ra vared konid");
-        Scanner scanner=new Scanner(System.in);
-        String esm =new String();
-        esm=scanner.next();
+        Scanner scanner = new Scanner(System.in);
+        String esm;
+        esm = scanner.next();
         return esm;
     }
+
     //
-    private boolean chek(String kalame){
-        //salam nadia, man in code ro ezafe kardam.
-        try{
-        String chahar=new String();
-        chahar=String.valueOf(kalame.charAt(3));
-        if(chahar.equals("a")|| chahar.equals("o")|| chahar.equals("u")|| chahar.equals("e")){
-            return true;
-        }
-        else {
-            return false;
-        }
-        }
-        catch (Exception ex){
+    private boolean chek(String kalame) {
+        try {
+            String chahar;
+            chahar = String.valueOf(kalame.charAt(3));
+            if (chahar.equals("a") || chahar.equals("o") || chahar.equals("u") || chahar.equals("e")) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (Exception ex) {
             System.out.println("kalame kamtar az 4 harf ast.");
             return false;
         }
@@ -41,10 +38,10 @@ public class HorofeSedaDar {
 
     private boolean chekswitch(String kalame) {
         try {
-            String chahar = new String();
+            String chahar;
             chahar = String.valueOf(kalame.charAt(3));
 
-            switch (chahar){
+            switch (chahar) {
                 case "a":
                 case "o":
                 case "u":
